@@ -26,3 +26,5 @@ var persone : any = [
 
 persone
 
+var x : number = 22;
+
