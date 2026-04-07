@@ -76,3 +76,38 @@ async function fetchData(): Promise<string> {
 }
 
 //👉 Used in APIs / backend
+
+// *******************************************Examples Here **************************************//S
+
+function disp_details (id:number,name:string,mail_id?:string)
+{
+console.log("ID",id)
+console.log("Name",name)
+if(mail_id!=undefined)
+    console.log("Email_ID",mail_id)
+}
+
+disp_details(23,'Aifaz');
+
+
+// REST Parameters 
+
+function addNumber(...nums:number[]){
+    var i;
+    var sum: number=0;
+
+    for(i=0;i<nums.length;i++){
+        sum=sum+nums[i];
+    }
+    console.log("sum of Number is :",sum);
+}
+addNumber(1,2,3,4)
+
+// Default Parameters 
+
+function calculate_discount(price:number,rate:number = 0.50){
+    var discount = price * rate;
+    console.log('discount Amount : ',discount)
+}
+calculate_discount(1000)
+calculate_discount(1000,0.30)
