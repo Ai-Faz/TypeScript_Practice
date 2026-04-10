@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.17.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "version": "1.17.0",
+    "libraryName": "j-query",
+    "libraryId": "c0ae9bcb-68d8-4979-99c9-15e159b6841c",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "j-query",
+    "solutionShortDescription": "j-query description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

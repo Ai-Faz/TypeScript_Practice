@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "j-query-client-side-solution",
+    "id": "c0ae9bcb-68d8-4979-99c9-15e159b6841c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "j-query description"
+      },
+      "longDescription": {
+        "default": "j-query description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "j-query Feature",
+        "description": "The feature that activates elements of the j-query solution.",
+        "id": "4b43f55c-928f-4ceb-82a8-479e1d1ea94b",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/j-query.sppkg"
+  }
+}
