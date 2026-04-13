@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.8",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "spfx-clean",
+    "libraryId": "df1c5409-d928-4683-82ab-6966965de3fc",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-clean",
+    "solutionShortDescription": "spfx-clean description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

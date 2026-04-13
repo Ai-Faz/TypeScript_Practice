@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "j-query-client-side-solution",
-    "id": "c0ae9bcb-68d8-4979-99c9-15e159b6841c",
+    "name": "spfx-clean-client-side-solution",
+    "id": "df1c5409-d928-4683-82ab-6966965de3fc",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -12,14 +12,14 @@
       "websiteUrl": "",
       "privacyUrl": "",
       "termsOfUseUrl": "",
-      "mpnId": "Undefined-1.17.0"
+      "mpnId": "Undefined-1.22.2"
     },
     "metadata": {
       "shortDescription": {
-        "default": "j-query description"
+        "default": "spfx-clean description"
       },
       "longDescription": {
-        "default": "j-query description"
+        "default": "spfx-clean description"
       },
       "screenshotPaths": [],
       "videoUrl": "",
@@ -27,14 +27,14 @@
     },
     "features": [
       {
-        "title": "j-query Feature",
-        "description": "The feature that activates elements of the j-query solution.",
-        "id": "4b43f55c-928f-4ceb-82a8-479e1d1ea94b",
+        "title": "spfx-clean Feature",
+        "description": "The feature that activates elements of the spfx-clean solution.",
+        "id": "54bdf89b-d460-46da-bced-3978440c2791",
         "version": "1.0.0.0"
       }
     ]
   },
   "paths": {
-    "zippedPackage": "solution/j-query.sppkg"
+    "zippedPackage": "solution/spfx-clean.sppkg"
   }
 }

@@ -10,6 +10,7 @@ declare interface IJQueryWebPartStrings {
   AppTeamsTabEnvironment: string;
   AppOfficeEnvironment: string;
   AppOutlookEnvironment: string;
+  UnknownEnvironment: string;
 }
 
 declare module 'JQueryWebPartStrings' {

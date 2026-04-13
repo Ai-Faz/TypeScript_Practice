@@ -1,0 +1,43 @@
+// Create Yeoman SharePoint Generator
+	yo @microsoft/sharepoint
+
+// install jQuery package
+	npm install jquery@2
+
+// install JQuery UI Package
+	npm install jqueryui
+
+// install needed types
+	npm install @types/jquery@2 --save-dev
+	npm install @types/jqueryui --save-dev
+
+// Open Web Part
+	code
+
+// Add this Externals section
+
+"jquery" : "node_modules/jquery/dist/jquery . min . js' ,
+jqueryui" : "node modules/jqueryui/jquery-ui.min.js"
+
+import MyAccordionTemplate from ./MyAccordionTemplate' ;
+
+import * as JQuery from 'jquery';
+import 'jqueryui'
+
+import { SPComponentLoader } from '@microsoft/sp-loader' ;
+
+
+public constructor() {
+super();
+SPComponentLoader. loadCss( ' // code . jquery . com/ui/l .11.4/ themes/ smoothness/jquery-ui . css ' ) ;
+}
+
+
+this.domElement.innerHtml= MyAccordionTemplate.templateHtml;
+ const accordionOption : JQueryUI.AccordionOption = {
+	animate : true ,
+	collabsable : false,
+	icons : {
+	header : 'ui-icon-circle-arrow-e'
+	activeHeader:
+	}
