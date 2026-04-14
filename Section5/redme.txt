@@ -1,0 +1,9 @@
+importing modules from microsoft SP-HTTP
+
+Two Interface
+1st Interface for Group of SharePoint Lists
+2nd Interface for each SharePoint List (Title,count,id,etc)
+
+Two Methods
+1nd for retriving all sharepoint lists
+2nd for display all sharepoint list

@@ -1,0 +1,97 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+/* 🔥 MAIN WRAPPER */
+.secondWebPart {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔥 CONTAINER */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 🔥 CARD UI */
+.card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: left;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* 🔥 TITLE */
+.title {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* 🔥 SUBTITLE */
+.subTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* 🔥 DESCRIPTION */
+.description {
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* 🔥 LABEL STYLE (important) */
+.label {
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* 🔥 VALUE TEXT */
+.value {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* 🔥 BUTTON */
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0078d4;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #005ea6;
+    transform: scale(1.05);
+  }
+}
+
+/* 🔥 BUTTON LABEL */
+.label {
+  color: #ffffff;
+}
