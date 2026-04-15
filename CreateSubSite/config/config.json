@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "create-subsite-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/createSubsite/CreateSubsiteWebPart.js",
+          "manifest": "./src/webparts/createSubsite/CreateSubsiteWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CreateSubsiteWebPartStrings": "lib/webparts/createSubsite/loc/{locale}.js"
+  }
+}

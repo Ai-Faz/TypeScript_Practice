@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.8",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "create-sub-site",
+    "libraryId": "02c8a66a-73c7-49e9-b1f8-3c8b2a1538d3",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "create-sub-site",
+    "solutionShortDescription": "create-sub-site description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
