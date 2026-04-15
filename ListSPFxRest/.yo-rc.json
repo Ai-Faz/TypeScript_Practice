@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.8",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "list-sp-fx-rest",
+    "libraryId": "b173d967-469c-48fc-bba4-ee03d249cca1",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "list-sp-fx-rest",
+    "solutionShortDescription": "list-sp-fx-rest description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

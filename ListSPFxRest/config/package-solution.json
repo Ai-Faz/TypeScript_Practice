@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "list-sp-fx-rest-client-side-solution",
+    "id": "b173d967-469c-48fc-bba4-ee03d249cca1",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.22.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "list-sp-fx-rest description"
+      },
+      "longDescription": {
+        "default": "list-sp-fx-rest description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "list-sp-fx-rest Feature",
+        "description": "The feature that activates elements of the list-sp-fx-rest solution.",
+        "id": "7d287b2b-f95a-41b2-81a0-083cc16c3c60",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/list-sp-fx-rest.sppkg"
+  }
+}
