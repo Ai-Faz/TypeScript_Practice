@@ -45,12 +45,14 @@ export default class SplistCurdWebPart extends BaseClientSideWebPart<ISplistCurd
             <th>First Name</th>
             <th>Last Name</th>
             <th>Department</th>
+            <th>EmpID</th>
           </tr>
 
           <tr>
             <td><input type="text" id="txtboxFN" placeholder="Enter First Name"/></td>
             <td><input type="text" id="txtboxLN" placeholder="Enter Last Name"/></td>
             <td><input type="text" id="txtboxDepartment" placeholder="Enter Department"/></td>
+            <td><input type="text" id="txtboxEmpID" placeholder="EMP ID"/></td>
           </tr>
 
           <tr>
@@ -81,8 +83,10 @@ export default class SplistCurdWebPart extends BaseClientSideWebPart<ISplistCurd
   const FirstName = (document.getElementById("txtboxFN") as HTMLInputElement).value;
   const LastName = (document.getElementById("txtboxLN") as HTMLInputElement).value;
   const Department = (document.getElementById("txtboxDepartment") as HTMLInputElement).value;
+  const Empid = (document.getElementById("txtboxEmpID") as HTMLInputElement).value;
 
-  if (!FirstName || !LastName || !Department) {
+  // ✅ FIXED VALIDATION
+  if (!FirstName || !LastName || !Department || !Empid) {
     alert("⚠️ Please fill all fields");
     return;
   }
@@ -93,7 +97,8 @@ export default class SplistCurdWebPart extends BaseClientSideWebPart<ISplistCurd
     Title: "Mr",
     FirstName: FirstName,
     LastName: LastName,
-    Department: Department
+    Department: Department,
+    Empid: Empid   // ✅ FIXED NAME
   };
 
   const options: ISPHttpClientOptions = {
@@ -110,6 +115,13 @@ export default class SplistCurdWebPart extends BaseClientSideWebPart<ISplistCurd
 
       if (res.status === 201) {
         alert("✅ Item inserted successfully");
+
+        // ✅ Clear fields
+        (document.getElementById("txtboxFN") as HTMLInputElement).value = "";
+        (document.getElementById("txtboxLN") as HTMLInputElement).value = "";
+        (document.getElementById("txtboxDepartment") as HTMLInputElement).value = "";
+        (document.getElementById("txtboxEmpID") as HTMLInputElement).value = "";
+
       } else {
         res.json().then(err => {
           console.error("FULL ERROR:", err);
