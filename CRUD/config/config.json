@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "splist-curd-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/splistCurd/SplistCurdWebPart.js",
+          "manifest": "./src/webparts/splistCurd/SplistCurdWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SplistCurdWebPartStrings": "lib/webparts/splistCurd/loc/{locale}.js"
+  }
+}

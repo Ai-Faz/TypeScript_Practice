@@ -1,0 +1,109 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.splistCrud {
+  padding: 20px;
+  background: #f5f7fa;
+  min-height: 100vh;
+  font-family: $ms-font-family-fallbacks;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  color: #323130;
+}
+
+.subTitle {
+  font-size: 16px;
+  color: #605e5c;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* TABLE DESIGN */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #0078d4;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+}
+
+/* INPUTS */
+input[type="text"] {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #0078d4;
+}
+
+/* BUTTONS */
+input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Insert */
+#btnSubmit {
+  background-color: #28a745;
+  color: white;
+}
+
+#btnSubmit:hover {
+  background-color: #218838;
+}
+
+/* Update */
+#btnUpdate {
+  background-color: #ffc107;
+  color: black;
+}
+
+#btnUpdate:hover {
+  background-color: #e0a800;
+}
+
+/* Delete */
+#btnDelete {
+  background-color: #dc3545;
+  color: white;
+}
+
+#btnDelete:hover {
+  background-color: #c82333;
+}
