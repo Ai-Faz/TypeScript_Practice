@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://hcsdevacc.sharepoint.com/sites/TestSite-AifazM-CarNews/Lists/StudentGrades/AllItems.aspx",
+      "fieldCustomizers": {
+        "grade": {
+          "id": "c2afb319-318a-404a-afb0-0c43ddf37bc3"
+        }
+      }
+    }
+  }
+}

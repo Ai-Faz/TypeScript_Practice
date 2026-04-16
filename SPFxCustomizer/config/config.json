@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "sp-fx-student-grade-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/spFxStudentGrade/SpFxStudentGradeFieldCustomizer.js",
+          "manifest": "./src/extensions/spFxStudentGrade/SpFxStudentGradeFieldCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpFxStudentGradeFieldCustomizerStrings": "lib/extensions/spFxStudentGrade/loc/{locale}.js"
+  }
+}
