@@ -1,0 +1,20 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.8",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "application-customizer",
+    "libraryId": "10180735-55bf-4a93-9a42-717cc6917e60",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "Application Customizer ",
+    "solutionShortDescription": "Application Customizer  description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}
