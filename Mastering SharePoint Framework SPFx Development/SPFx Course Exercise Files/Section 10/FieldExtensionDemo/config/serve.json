@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://kameswarasarma.sharepoint.com/Lists/ProjectsStatus/AllItems.aspx",
+      "fieldCustomizers": {
+        "Status": {
+          "id": "4fe3e53b-ab3e-4db1-8bf2-e1765fbb7190",
+          "properties": {
+            "sampleText": "Completed"
+          }
+        }
+      }
+    },
+    "myFieldCustomizerExtension": {
+      "pageUrl": "https://kameswarasarma.sharepoint.com/Lists/ProjectsStatus/AllItems.aspx",
+      "fieldCustomizers": {
+        "Status": {
+          "id": "4fe3e53b-ab3e-4db1-8bf2-e1765fbb7190",
+          "properties": {
+            "sampleText": "Completed"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://kameswarasarma.sharepoint.com/Lists/ProjectsStatus/AllItems.aspx",
+      "customActions": {
+        "a3dd8a22-8fe4-4d82-8c0a-a3ce978a76aa": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "Multiple items are selected..."
+          }
+        }
+      }
+    },
+    "myCommandSetDemo": {
+      "pageUrl": "https://kameswarasarma.sharepoint.com/Lists/ProjectsStatus/AllItems.aspx",
+      "customActions": {
+        "a3dd8a22-8fe4-4d82-8c0a-a3ce978a76aa": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "Multiple items are selected...."
+          }
+        }
+      }
+    }
+  }
+}

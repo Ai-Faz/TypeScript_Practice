@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://kameswarasarma.sharepoint.com/SitePages/ACDemo.aspx",
+      "customActions": {
+        "b6fd3a84-cd9c-4846-8744-ca9650666bf2": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "Top": "Header of the page",
+            "Bottom": "Footer of the page"
+          }
+        }
+      }
+    },
+    "acDemo": {
+      "pageUrl": "https://kameswarasarma.sharepoint.com/SitePages/ACDemo.aspx",
+      "customActions": {
+        "b6fd3a84-cd9c-4846-8744-ca9650666bf2": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "Top": "Header of the page",
+            "Bottom": "Footer of the page"
+          }
+        }
+      }
+    }
+  }
+}
