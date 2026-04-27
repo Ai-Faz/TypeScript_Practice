@@ -11,11 +11,25 @@ import * as strings from 'SppnpjscruddemoWebPartStrings';
 
 import * as pnp from 'sp-pnp-js';
 
+
+
+
 export interface ISppnpjscruddemoWebPartProps {
   description: string;
 }
 
 export default class SppnpjscruddemoWebPart extends BaseClientSideWebPart <ISppnpjscruddemoWebPartProps> {
+
+    public onInit(): Promise<void> {
+
+    return super.onInit().then(_ => {
+  
+      pnp.setup({
+        spfxContext: this.context
+      });
+      
+    });
+  }
 
   public render(): void {
     this.domElement.innerHTML = `
