@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "testnewlabrary-client-side-solution",
+    "id": "010e8a09-a027-4ac5-ba71-24161e824667",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "testnewlabrary description"
+      },
+      "longDescription": {
+        "default": "testnewlabrary description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "testnewlabrary Feature",
+        "description": "The feature that activates elements of the testnewlabrary solution.",
+        "id": "b3de093c-8ee9-47e1-8f97-cc14d54b6071",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/testnewlabrary.sppkg"
+  }
+}
