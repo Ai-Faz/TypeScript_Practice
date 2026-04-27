@@ -164,7 +164,7 @@ export default class SppnpjscruddemoWebPart extends BaseClientSideWebPart <ISppn
 
     //const siteurl: string = this.context.pageContext.site.absoluteUrl + "/_api/web/lists/getbytitle('SoftwareCatalog')/items";
 
-    pnp.sp.web.lists.getByTitle("SoftwareCatalog").items.add({
+      pnp.sp.web.lists.getByTitle("SoftwareCatalog").items.add({
       Title: softwaretitle,
       SoftwareVendor: softwarevendor,
       SoftwareName: softwarename,

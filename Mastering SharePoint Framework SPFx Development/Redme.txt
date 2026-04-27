@@ -82,8 +82,13 @@
                   🔹 🔥 Final Table (Quick Revision)                  |
                           Tool	Version	Status                         |
     --------------------------------------------------------------------
-        Node.js     	    18.20.8 	✅ Perfect                     |
+        Node.js     	    18.20.8    	    ✅ Perfect                     |
         Yo (Yeoman) 	    4.3.1	    ✅ Perfect                     |
-        Gulp CLI	        2.3.0   	✅ Perfect                     |
+        Gulp CLI	        2.3.0       ✅ Perfect                     |
         Gulp (Local)    	~4.0.2	    ⏳ Auto after project          |
         SPFx Generator  	1.18.2	    ✅ Ready                       |
+
+** ship package 
+
+	-gulp bundle --ship
+	-gulp package-solution --ship 
