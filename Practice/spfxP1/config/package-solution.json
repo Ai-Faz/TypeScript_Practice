@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-practiceset-1-client-side-solution",
+    "id": "fbb69bde-9135-4e50-899c-2898350e2c6b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfxPracticeset1 description"
+      },
+      "longDescription": {
+        "default": "spfxPracticeset1 description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-practiceset-1 Feature",
+        "description": "The feature that activates elements of the spfx-practiceset-1 solution.",
+        "id": "13bd799e-cb67-4d33-9067-7827c0896f05",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-practiceset-1.sppkg"
+  }
+}
