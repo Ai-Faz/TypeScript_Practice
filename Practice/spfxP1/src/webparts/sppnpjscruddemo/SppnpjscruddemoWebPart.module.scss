@@ -1,74 +1,72 @@
-@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+.app-container {
+max-width: 600px;
+margin: 30px auto;
+padding: 20px;
+border-radius: 12px;
+background: #ffffff;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+font-family: "Segoe UI", sans-serif;
+}
 
-.sppnpjscruddemo {
-  .container {
-    max-width: 700px;
-    margin: 0px auto;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  }
+h2 {
+text-align: center;
+color: #1f2937;
+margin-bottom: 20px;
+}
 
-  .row {
-    @include ms-Grid-row;
-    @include ms-fontColor-white;
-    background-color: $ms-color-themeDark;
-    padding: 20px;
-  }
+.form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
 
-  .column {
-    @include ms-Grid-col;
-    @include ms-lg10;
-    @include ms-xl8;
-    @include ms-xlPush2;
-    @include ms-lgPush1;
-  }
+input, select, textarea {
+padding: 10px;
+border-radius: 6px;
+border: 1px solid #d1d5db;
+font-size: 14px;
+}
 
-  .title {
-    @include ms-font-xl;
-    @include ms-fontColor-white;
-  }
+textarea {
+resize: none;
+height: 80px;
+}
 
-  .subTitle {
-    @include ms-font-l;
-    @include ms-fontColor-white;
-  }
+button {
+padding: 10px;
+border: none;
+border-radius: 6px;
+background: #2563eb;
+color: white;
+font-weight: 500;
+cursor: pointer;
+transition: 0.2s;
+}
 
-  .description {
-    @include ms-font-l;
-    @include ms-fontColor-white;
-  }
+button:hover {
+background: #1d4ed8;
+}
 
-  .button {
-    // Our button
-    text-decoration: none;
-    height: 32px;
+#status {
+margin-top: 10px;
+color: green;
+font-weight: 500;
+}
 
-    // Primary Button
-    min-width: 80px;
-    background-color: $ms-color-themePrimary;
-    border-color: $ms-color-themePrimary;
-    color: $ms-color-white;
+table {
+width: 100%;
+margin-top: 20px;
+border-collapse: collapse;
+}
 
-    // Basic Button
-    outline: transparent;
-    position: relative;
-    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
-    -webkit-font-smoothing: antialiased;
-    font-size: $ms-font-size-m;
-    font-weight: $ms-font-weight-regular;
-    border-width: 0;
-    text-align: center;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0 16px;
+table th {
+background: #2563eb;
+color: white;
+padding: 8px;
+}
 
-    .label {
-      font-weight: $ms-font-weight-semibold;
-      font-size: $ms-font-size-m;
-      height: 32px;
-      line-height: 32px;
-      margin: 0 4px;
-      vertical-align: top;
-      display: inline-block;
-    }
-  }
+table td {
+border: 1px solid #e5e7eb;
+padding: 8px;
+text-align: center;
 }
