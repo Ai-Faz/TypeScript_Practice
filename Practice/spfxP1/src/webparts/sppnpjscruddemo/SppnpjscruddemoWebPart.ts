@@ -10,6 +10,8 @@ import { escape } from '@microsoft/sp-lodash-subset';
 import styles from './SppnpjscruddemoWebPart.module.scss';
 import * as strings from 'SppnpjscruddemoWebPartStrings';
 
+import * as pnp from 'sp-pnp-js'
+
 export interface ISppnpjscruddemoWebPartProps {
   description: string;
 }
@@ -21,31 +23,95 @@ export default class SppnpjscruddemoWebPart extends BaseClientSideWebPart<ISppnp
 
   public render(): void {
     this.domElement.innerHTML = `
-    <section class="${styles.sppnpjscruddemo} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
-      <div class="${styles.welcome}">
-        <img alt="" src="${this._isDarkTheme ? require('./assets/welcome-dark.png') : require('./assets/welcome-light.png')}" class="${styles.welcomeImage}" />
-        <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
-        <div>${this._environmentMessage}</div>
-        <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
-      </div>
-      <div>
-        <h3>Welcome to SharePoint Framework!</h3>
-        <p>
-        The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-        </p>
-        <h4>Learn more about SPFx development:</h4>
-          <ul class="${styles.links}">
-            <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
-          </ul>
-      </div>
-    </section>`;
+   <div>
+          <div>
+          <table border='5' bgcolor='aqua'>
+            <tr>
+            <td>Please Enter Software ID </td>
+            <td><input type='text' id='txtID' />
+            <td><input type='submit' id='btnRead' value='Read Details' />
+            </td>
+            </tr>
+            <tr>
+            <td>Software Title</td>
+            <td><input type='text' id='txtSoftwareTitle' />
+            </tr>
+      
+            <tr>
+            <td>Software Name</td>
+            <td><input type='text' id='txtSoftwareName' />
+            </tr>
+      
+            <tr>
+            <td>Software Vendor</td>
+            <td>
+            <select id="ddlSoftwareVendor">
+              <option value="Microsoft">Microsoft</option>
+              <option value="Sun">Sun</option>
+              <option value="Oracle">Oracle</option>
+              <option value="Google">Google</option>
+            </select>  
+            </td>
+           
+            </tr>
+      
+            <tr>
+            <td>Software Version</td>
+            <td><input type='text' id='txtSoftwareVersion' />
+            </tr>
+      
+            <tr>
+            <td>Software Description</td>
+            <td><textarea rows='5' cols='40' id='txtSoftwareDescription'> </textarea> </td>
+            </tr>
+      
+            <tr>
+            <td colspan='2' align='center'>
+            <input type='submit'  value='Insert Item' id='btnSubmit' />
+            <input type='submit'  value='Update' id='btnUpdate' />
+            <input type='submit'  value='Delete' id='btnDelete' />
+            <input type='submit'  value='Show All Records' id='btnReadAll' />
+            </td>
+          </table>
+          </div>
+          <div id="divStatus"/>
+      
+          <h2>Get All List Items</h2>
+          <hr/>
+          <div id="spListData" />
+
+
+          </div>`;
+          this._bindEvents();
+          this.readAllItems();
   }
+
+
+  private _bindEvents() : void {
+    this.domElement.querySelector('btnSubmit').addEventListener('click' , ()=> {this.addListItem();});
+  }
+  private addListItem() : void {
+    var softwaretitle = (document.getElementById("txtSoftwareTitle")as HTMLInputElement)!["value"];
+    var softwarename = (document.getElementById("txtSoftwareName")as HTMLInputElement)!["value"];
+    var softwareversion = (document.getElementById("txtSoftwareVersion")as HTMLInputElement)!["value"];
+    var softwarevendor = (document.getElementById("ddlSoftwareVendor")as HTMLInputElement)!["value"];
+    var softwareDescription = (document.getElementById("txtSoftwareDescription")as HTMLInputElement)!["value"];
+
+    const siteurl: string = this.context.pageContext.site.absoluteUrl + "/_api/web/lists/getbytitle('SoftwareCatalog')/items";
+
+      pnp.sp.web.lists.getByTitle("SoftwareCatalog").items.add({
+        
+      Title: softwaretitle,
+      SoftwareVendor: softwarevendor,
+      SoftwareName: softwarename,
+      SoftwareVersion: softwareversion,
+      SoftwareDescription: softwareDescription,
+
+      }).then(r => {
+        alert("success");
+      });
+  }
+
 
   protected onInit(): Promise<void> {
     return this._getEnvironmentMessage().then(message => {
