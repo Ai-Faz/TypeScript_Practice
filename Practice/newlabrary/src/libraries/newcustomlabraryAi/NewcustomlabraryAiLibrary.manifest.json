@@ -1,0 +1,9 @@
+{
+  "id": "05258cd4-5098-4cf2-9aba-99168b206826",
+  "alias": "NewcustomlabraryAiLibrary",
+  "componentType": "Library",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2
+}
