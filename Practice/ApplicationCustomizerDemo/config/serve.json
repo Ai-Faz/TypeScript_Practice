@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
+      "pageUrl": "https://hcsdevacc.sharepoint.com/sites/TestSite-AifazM-CarNews/SitePages/AC.aspx",
       "customActions": {
         "7b1a73f4-9427-4a72-8739-f2341551b597": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -15,7 +15,7 @@
       }
     },
     "acDemo": {
-      "pageUrl": "https://{tenantDomain}/SitePages/myPage.aspx",
+      "pageUrl": "https://hcsdevacc.sharepoint.com/sites/TestSite-AifazM-CarNews/SitePages/AC.aspx",
       "customActions": {
         "7b1a73f4-9427-4a72-8739-f2341551b597": {
           "location": "ClientSideExtension.ApplicationCustomizer",
