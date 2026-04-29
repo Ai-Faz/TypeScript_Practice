@@ -1,6 +1,39 @@
-.myFieldCostomizerExtension {
-  background-color: "[theme:themePrimary, default:#0078d4]";
-  color: "[theme:white, default:#ffffff]";
+.container {
   text-align: center;
-  padding: 0.5rem;
+}
+
+/* Default */
+.default {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #444;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* Completed */
+.completed {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #28a745;
+  color: white;
+  font-weight: 600;
+}
+
+/* Pending */
+.pending {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #dc3545;
+  color: white;
+  font-weight: 600;
+}
+
+/* In Progress */
+.inprogress {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #ffc107;
+  color: black;
+  font-weight: 600;
 }

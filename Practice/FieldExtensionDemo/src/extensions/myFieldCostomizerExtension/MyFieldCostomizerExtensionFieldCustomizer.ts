@@ -1,49 +1,74 @@
 import { Log } from '@microsoft/sp-core-library';
 import {
   BaseFieldCustomizer,
-  type IFieldCustomizerCellEventParameters
+  IFieldCustomizerCellEventParameters
 } from '@microsoft/sp-listview-extensibility';
 
 import * as strings from 'MyFieldCostomizerExtensionFieldCustomizerStrings';
 import styles from './MyFieldCostomizerExtensionFieldCustomizer.module.scss';
 
+const LOG_SOURCE: string = 'MyFieldCustomizerExtension';
+
 /**
- * If your field customizer uses the ClientSideComponentProperties JSON input,
- * it will be deserialized into the BaseExtension.properties object.
- * You can define an interface to describe it.
+ * Properties interface
  */
-export interface IMyFieldCostomizerExtensionFieldCustomizerProperties {
-  // This is an example; replace with your own property
+export interface IMyFieldCustomizerExtensionFieldCustomizerProperties {
   sampleText?: string;
 }
 
-const LOG_SOURCE: string = 'MyFieldCostomizerExtensionFieldCustomizer';
+/**
+ * Field Customizer Class
+ */
+export default class MyFieldCustomizerExtensionFieldCustomizer
+  extends BaseFieldCustomizer<IMyFieldCustomizerExtensionFieldCustomizerProperties> {
 
-export default class MyFieldCostomizerExtensionFieldCustomizer
-  extends BaseFieldCustomizer<IMyFieldCostomizerExtensionFieldCustomizerProperties> {
-
+  /**
+   * Init method (runs once)
+   */
   public onInit(): Promise<void> {
-    // Add your custom initialization to this method.  The framework will wait
-    // for the returned promise to resolve before firing any BaseFieldCustomizer events.
-    Log.info(LOG_SOURCE, 'Activated MyFieldCostomizerExtensionFieldCustomizer with properties:');
-    Log.info(LOG_SOURCE, JSON.stringify(this.properties, undefined, 2));
-    Log.info(LOG_SOURCE, `The following string should be equal: "MyFieldCostomizerExtensionFieldCustomizer" and "${strings.Title}"`);
+    Log.info(LOG_SOURCE, '✅ Field Customizer Initialized');
+    console.log("✅ FIELD CUSTOMIZER LOADED");
+
     return Promise.resolve();
   }
 
+  /**
+   * Render each cell
+   */
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
-    // Use this method to perform your custom cell rendering.
-    const text: string = `${this.properties.sampleText}: ${event.fieldValue}`;
 
-    event.domElement.innerText = text;
+    const fieldValue: string = event.fieldValue || "No Value";
 
-    event.domElement.classList.add(styles.myFieldCostomizerExtension);
+    // Combine property + actual value
+    const displayText: string = this.properties.sampleText
+      ? `${this.properties.sampleText} - ${fieldValue}`
+      : fieldValue;
+
+    // Dynamic color based on value
+    let statusClass: string = styles.default;
+
+    if (fieldValue.toLowerCase() === "completed") {
+      statusClass = styles.completed;
+    } else if (fieldValue.toLowerCase() === "pending") {
+      statusClass = styles.pending;
+    } else if (fieldValue.toLowerCase() === "in progress") {
+      statusClass = styles.inprogress;
+    }
+
+    // Render UI
+    event.domElement.innerHTML = `
+      <div class="${styles.container}">
+        <span class="${statusClass}">
+          ${displayText}
+        </span>
+      </div>
+    `;
   }
 
+  /**
+   * Cleanup
+   */
   public onDisposeCell(event: IFieldCustomizerCellEventParameters): void {
-    // This method should be used to free any resources that were allocated during rendering.
-    // For example, if your onRenderCell() called ReactDOM.render(), then you should
-    // call ReactDOM.unmountComponentAtNode() here.
     super.onDisposeCell(event);
   }
 }
