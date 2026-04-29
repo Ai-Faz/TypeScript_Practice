@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://hcsdevacc.sharepoint.com/sites/TestSite-AifazM/Lists/ProjectsStatus/AllItems.aspx",
+      "fieldCustomizers": {
+        "Status": {
+          "id": "11035f6e-35eb-47c0-a5b9-4d8041dcb969",
+          "properties": {
+            "sampleText": "Completed"
+          }
+        }
+      }
+    },
+    "myFieldCostomizerExtension": {
+      "pageUrl": "https://hcsdevacc.sharepoint.com/sites/TestSite-AifazM/Lists/ProjectsStatus/AllItems.aspx",
+      "fieldCustomizers": {
+        "Status": {
+          "id": "11035f6e-35eb-47c0-a5b9-4d8041dcb969",
+          "properties": {
+            "sampleText": "Completed"
+          }
+        }
+      }
+    }
+  }
+}
