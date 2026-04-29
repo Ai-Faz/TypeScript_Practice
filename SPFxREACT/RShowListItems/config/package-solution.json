@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "r-show-list-items-client-side-solution",
+    "id": "978c947f-d070-4a6d-88a5-ed9825daaefc",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "r-show-list-items description"
+      },
+      "longDescription": {
+        "default": "r-show-list-items description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "r-show-list-items Feature",
+        "description": "The feature that activates elements of the r-show-list-items solution.",
+        "id": "14fff619-6fbe-4aee-bee7-5a00f03bb869",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/r-show-list-items.sppkg"
+  }
+}
