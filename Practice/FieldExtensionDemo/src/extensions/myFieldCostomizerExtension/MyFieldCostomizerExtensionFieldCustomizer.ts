@@ -9,65 +9,58 @@ import styles from './MyFieldCostomizerExtensionFieldCustomizer.module.scss';
 
 const LOG_SOURCE: string = 'MyFieldCustomizerExtension';
 
-/**
- * Properties interface
- */
 export interface IMyFieldCustomizerExtensionFieldCustomizerProperties {
   sampleText?: string;
 }
 
-/**
- * Field Customizer Class
- */
 export default class MyFieldCustomizerExtensionFieldCustomizer
   extends BaseFieldCustomizer<IMyFieldCustomizerExtensionFieldCustomizerProperties> {
 
-  /**
-   * Init method (runs once)
-   */
   public onInit(): Promise<void> {
-    Log.info(LOG_SOURCE, '✅ Field Customizer Initialized');
-    console.log("✅ FIELD CUSTOMIZER LOADED");
-
+    // ✅ Now strings is USED (error gone)
+    Log.info(LOG_SOURCE, `✅ ${strings.Title} Loaded`);
     return Promise.resolve();
   }
 
-  /**
-   * Render each cell
-   */
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 
-    const fieldValue: string = event.fieldValue || "No Value";
+    const rawValue: string = (event.fieldValue || "").toString();
+    const status = rawValue.toLowerCase();
 
-    // Combine property + actual value
-    const displayText: string = this.properties.sampleText
-      ? `${this.properties.sampleText} - ${fieldValue}`
-      : fieldValue;
+    let value: number = 0;
 
-    // Dynamic color based on value
-    let statusClass: string = styles.default;
-
-    if (fieldValue.toLowerCase() === "completed") {
-      statusClass = styles.completed;
-    } else if (fieldValue.toLowerCase() === "pending") {
-      statusClass = styles.pending;
-    } else if (fieldValue.toLowerCase() === "in progress") {
-      statusClass = styles.inprogress;
+    // 🔥 Status → Percentage mapping
+    if (status === "completed") {
+      value = 100;
+    } else if (status === "in progress") {
+      value = 60;
+    } else if (status === "pending") {
+      value = 20;
+    } else {
+      value = 10;
     }
 
-    // Render UI
+    // 🧠 Final display text
+    const displayText = `${rawValue} : ${value}`;
+
+    // 🎨 Render UI
     event.domElement.innerHTML = `
       <div class="${styles.container}">
-        <span class="${statusClass}">
+        
+        <div class="${styles.text}">
           ${displayText}
-        </span>
+        </div>
+
+        <div class="${styles.barBackground}">
+          <div class="${styles.barFill}" style="width:${value}%">
+            ${value}%
+          </div>
+        </div>
+
       </div>
     `;
   }
 
-  /**
-   * Cleanup
-   */
   public onDisposeCell(event: IFieldCustomizerCellEventParameters): void {
     super.onDisposeCell(event);
   }

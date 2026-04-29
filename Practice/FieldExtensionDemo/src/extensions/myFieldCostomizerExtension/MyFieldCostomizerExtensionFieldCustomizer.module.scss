@@ -1,39 +1,28 @@
 .container {
-  text-align: center;
+  width: 100%;
 }
 
-/* Default */
-.default {
-  padding: 4px 10px;
-  border-radius: 6px;
-  background-color: #444;
-  color: #fff;
+.text {
   font-size: 12px;
+  margin-bottom: 4px;
+  font-weight: 600;
 }
 
-/* Completed */
-.completed {
-  padding: 4px 10px;
-  border-radius: 6px;
-  background-color: #28a745;
+/* background bar */
+.barBackground {
+  width: 100%;
+  height: 16px;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* fill bar */
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, #0078d4, #00b4ff);
   color: white;
-  font-weight: 600;
-}
-
-/* Pending */
-.pending {
-  padding: 4px 10px;
-  border-radius: 6px;
-  background-color: #dc3545;
-  color: white;
-  font-weight: 600;
-}
-
-/* In Progress */
-.inprogress {
-  padding: 4px 10px;
-  border-radius: 6px;
-  background-color: #ffc107;
-  color: black;
-  font-weight: 600;
+  text-align: center;
+  font-size: 10px;
+  line-height: 16px;
 }
